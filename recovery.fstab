@@ -13,6 +13,7 @@
 /data				ext4	/dev/block/platform/bootdevice/by-name/userdata		flags=encryptable=footer;length=-16384
 /dtbo				emmc	/dev/block/platform/bootdevice/by-name/dtbo
 /vbmeta		        emmc	/dev/block/platform/bootdevice/by-name/vbmeta		flags=display="Vbmeta";backup=1;flashimg
+/para			    emmc	/dev/block/platform/bootdevice/by-name/para		flags=display="Para";backup=1;wipeingui
 
 # External storage
 /external_sd		vfat	/dev/block/mmcblk1p1 /dev/block/mmcblk1	flags=fsflags=utf8;display="SDcard";storage;wipeingui;removable
