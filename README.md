@@ -17,3 +17,5 @@ Not working:
 
 1.Decryption
 
+To build
+cd <source-dir>; export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch omni_RMX1941-eng; mka recoveryimage
