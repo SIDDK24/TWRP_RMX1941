@@ -16,26 +16,26 @@
 # limitations under the License.
 #
 
-# Specify phone tech before including full_phone
-$(call inherit-product, vendor/omni/config/gsm.mk)
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
 
-# Inherit some common Omni stuff.
+# Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
-$(call inherit-product, build/target/product/embedded.mk)
 
-# Inherit Telephony packages
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
-# Inherit language packages
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
-# Inherit 64bit support
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-
-# Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := RMX1941
-PRODUCT_NAME := omni_RMX1941
+# Device identifier.
 PRODUCT_BRAND := realme
-PRODUCT_MODEL := Realme C2
-PRODUCT_MANUFACTURER := realme
+PRODUCT_DEVICE := RMX1941
+PRODUCT_MANUFACTURER := OPPO
+PRODUCT_MODEL := RMX1941
+PRODUCT_NAME := omni_RMX1941
 PRODUCT_RELEASE_NAME := Realme C2
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=RMX1941 \
+    BUILD_PRODUCT=RMX1941 \
+    TARGET_DEVICE=RMX1941
+
+# Dimen
+TARGET_SCREEN_HEIGHT := 1560
+TARGET_SCREEN_WIDTH := 720
+TW_THEME := portrait_hdpi
