@@ -17,7 +17,8 @@
 /nvdata          ext4     /dev/block/platform/bootdevice/by-name/nvdata          flags=backup=1;display="Nvdata";flashimg=1
 /nvcfg           ext4     /dev/block/platform/bootdevice/by-name/nvcfg           flags=backup=1;display="Nvcfg";flashimg=1
 /vbmeta		       emmc     /dev/block/platform/bootdevice/by-name/vbmeta		       flags=display="Vbmeta";backup=1;flashimg=1
+/para 		       emmc     /dev/block/platform/bootdevice/by-name/para 		       flags=display="Para";wipeingui
 
 # External devices
 /external_sd     auto	    /dev/block/mmcblk1p1	   /dev/block/mmcblk1            flags=display="Micro SD card";storage;wipeingui;removable
-/usb_otg	       vfat     /dev/block/sda1          /dev/block/sda                flags=display="Usb-Otg";storage;removable;wipeingui
+/usb_otg	       auto     /dev/block/sda1          /dev/block/sda                flags=display="Usb-Otg";storage;removable;wipeingui
