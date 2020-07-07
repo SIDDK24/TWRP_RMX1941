@@ -17,6 +17,7 @@
 #
 
 DEVICE_PATH := device/realme/RMX1941
+LOCAL_PATH := device/realme/RMX1941
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
