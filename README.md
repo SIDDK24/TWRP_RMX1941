@@ -9,10 +9,11 @@ Working:
 
 3.Screenshots
 
+4.OTG
+
+5.MTP
+
 Not working:
 
-1.OTG
+1.Decryption
 
-2.Decryption
-
-3.MTP
