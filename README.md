@@ -74,4 +74,4 @@ Build the TWRP recovery using below command.
 
 ## NOTE
 
-Most of the work here is from internet. Thanks to all the members involved in TWRP project, example DTs and testers.
+Most of the work here is from internet. Thanks to https://github.com/buddi56.
