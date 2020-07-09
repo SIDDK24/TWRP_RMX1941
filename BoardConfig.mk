@@ -140,7 +140,6 @@ TW_H_OFFSET := -80
 
 # Crypto
 TW_INCLUDE_CRYPTO_FBE := true
-TW_INCLUDE_CRYPTO := true
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
