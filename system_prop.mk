@@ -21,3 +21,5 @@ ro.product.name=RMX1941
 ro.product.device=RMX1941
 ro.build.product=RMX1941
 ro.treble.enabled=true
+ro.boot.avb_version=1.0
+ro.boot.vbmeta.avb_version=1.0
