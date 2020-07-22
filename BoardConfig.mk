@@ -111,13 +111,10 @@ RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TARGET_DISABLE_TRIPLE_BUFFERING := false
 RECOVERY_SDCARD_ON_DATA := true
 
-# System Properties
-TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system_prop.mk
-
 # TWRP Configuration
 TW_THEME := portrait_hdpi
 TW_INPUT_BLACKLIST := "hbtp_vm"
-TW_DEVICE_VERSION := $(shell date -u +" %F")
+TW_DEVICE_VERSION :=1 BY SIDDK
 TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 560
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
@@ -135,11 +132,8 @@ ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_SKIP_COMPATIBILITY_CHECK := true
-TW_Y_OFFSET := 80
-TW_H_OFFSET := -80
-
-# Crypto
-TW_INCLUDE_CRYPTO_FBE := true
+TW_Y_OFFSET := 52
+TW_H_OFFSET := -52
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
