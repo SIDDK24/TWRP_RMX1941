@@ -35,8 +35,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_PRODUCT=RMX1941 \
     TARGET_DEVICE=RMX1941
 
-# Display Note: Place these flags here only. Getting error (TW_THEME_WARNING_MSG) if placed in BoardConfig.mk
-
+# Dimen
 TARGET_SCREEN_HEIGHT := 1560
 TARGET_SCREEN_WIDTH := 720
 TW_THEME := portrait_hdpi
