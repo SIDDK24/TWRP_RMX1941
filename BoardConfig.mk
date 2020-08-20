@@ -16,8 +16,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/realme/RMX1941
-LOCAL_PATH := device/realme/RMX1941
+DEVICE_PATH := device/realme/rmx1941
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -102,7 +101,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery.fstab
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_SUPPRESS_SECURE_ERASE := true
@@ -114,7 +112,7 @@ RECOVERY_SDCARD_ON_DATA := true
 # TWRP Configuration
 TW_THEME := portrait_hdpi
 TW_INPUT_BLACKLIST := "hbtp_vm"
-TW_DEVICE_VERSION :=1 BY SIDDK
+TW_DEVICE_VERSION :=BY SIDDK
 TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 560
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
@@ -125,7 +123,6 @@ TW_NO_BATT_PERCENT := false
 TW_EXCLUDE_TWRPAPP := true
 TW_EXCLUDE_SUPERSU := true
 TW_EXTRA_LANGUAGES := true
-TW_DEFAULT_LANGUAGE := en
 TW_OZIP_DECRYPT_KEY := "ACAC1E13A72531AE4A1B22BB31C1CC22"
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 ENABLE_CPUSETS := true
@@ -134,7 +131,6 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TW_SKIP_COMPATIBILITY_CHECK := true
 TW_Y_OFFSET := 52
 TW_H_OFFSET := -52
-PB_TORCH_PATH := "/sys/class/leds/flashlight"
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
