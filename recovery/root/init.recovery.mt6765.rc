@@ -55,6 +55,13 @@ service mobicore /vendor/bin/mcDriverDaemon --P1 /mnt/vendor/persist/mcRegistry 
     -r /vendor/app/mcRegistry/9073f03a9618383bb1856eb3f990babd.drbin
     seclabel u:r:recovery:s0
     
+on property:ro.crypto.state=encrypted
+    start hal_cryptoeng_oppo
+    start mobicore
+    start servicemanager
+    start hwservicemanager
+    start keymaster-3-0
+    
 on property:enable.fbe.service=0
     stop hal_cryptoeng_oppo
     stop mobicore
@@ -68,3 +75,38 @@ service erase_para /sbin/dd if=/dev/zero of=/dev/block/bootdevice/by-name/para
     disabled
     seclabel u:r:recovery:s0
     oneshot
+
+# from init.aging.rc
+
+on early-init
+    mount debugfs debugfs /sys/kernel/debug
+
+service dramaging /sbin/dramaging
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
+service flashaging /sbin/flashaging
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
+service sbltest /sbin/sbltestreport
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
+on property:vendor.oppo.engineermode.chargeswitch=true
+    write /sys/class/power_supply/battery/mmi_charging_enable 1
+
+on property:vendor.oppo.engineermode.chargeswitch=false
+    write /sys/class/power_supply/battery/mmi_charging_enable 0
+
+on property:sys.oppo_ftm_mode=998
+    start servicemanager
+
+on property:sys.oppo_ftm_mode=998 && property:init.svc.servicemanager=running
+    wait /cache/factory/agingtest_ui.log
+    start dramaging
+    start flashaging
+    start sbltest
