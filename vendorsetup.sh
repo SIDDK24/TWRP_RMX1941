@@ -16,5 +16,5 @@
 # limitations under the License.
 #
 
-add_lunch_combo omni_rmx1941-userdebug
-add_lunch_combo omni_rmx1941-eng
+add_lunch_combo omni_RMX1941-userdebug
+add_lunch_combo omni_RMX1941-eng

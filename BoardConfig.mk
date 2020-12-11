@@ -16,7 +16,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/realme/rmx1941
+DEVICE_PATH := device/realme/RMX1941
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true

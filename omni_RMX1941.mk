@@ -22,8 +22,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
 $(call inherit-product, vendor/pb/config/common.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := rmx1941
-PRODUCT_NAME := omni_rmx1941
+PRODUCT_DEVICE := RMX1941
+PRODUCT_NAME := omni_RMX1941
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme C2
 PRODUCT_MANUFACTURER := realme
