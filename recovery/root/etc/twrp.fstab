@@ -2,8 +2,9 @@
 /system_image           emmc    /dev/block/platform/bootdevice/by-name/system
 /vendor                 ext4    /dev/block/platform/bootdevice/by-name/vendor           flags=wipeingui;display="Vendor"
 /vendor_image           emmc    /dev/block/platform/bootdevice/by-name/vendor
-/data			ext4	/dev/block/platform/bootdevice/by-name/userdata		flags=fileencryption=aes-256-cts
+/data			ext4	/dev/block/platform/bootdevice/by-name/userdata		flags=fileencryption=aes-256-xts
 /cache			ext4	/dev/block/platform/bootdevice/by-name/cache
+/mnt/vendor/persist                ext4    /dev/block/platform/bootdevice/by-name/persist          flags=backup=1;display="Persist";mounttodecrypt
 /proinfo		emmc	/dev/block/platform/bootdevice/by-name/proinfo		flags=display="proinfo";backup=1
 /nvdata			ext4	/dev/block/platform/bootdevice/by-name/nvdata		flags=display="nvdata";backup=1
 /nvram			emmc	/dev/block/platform/bootdevice/by-name/nvram		flags=display="nvram";backup=1;flashimg=1

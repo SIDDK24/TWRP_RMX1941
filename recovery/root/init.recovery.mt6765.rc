@@ -1,6 +1,5 @@
 on fs
     install_keyring
-    mkdir /mnt/vendor/persist 0777 system system
     setprop crypto.ready 1
 
 service keystore_auth /sbin/keystore_auth
