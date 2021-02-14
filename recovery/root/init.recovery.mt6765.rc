@@ -2,36 +2,37 @@ import /init.recovery.trustonic.rc
 
 on fs
     install_keyring
+    export LD_LIBRARY_PATH /system/lib64:/vendor/lib64:/vendor/lib64/hw
     setprop crypto.ready 1
     write /sys/class/power_supply/usb/otg_switch 1
 
-service keystore_auth /sbin/keystore_auth
+service keystore_auth /system/bin/keystore_auth
     oneshot
     user system
     group root
     disabled
     seclabel u:r:recovery:s0
 
-service keystore /sbin/keystore /tmp/misc/keystore
+service keystore /system/bin/keystore /tmp/misc/keystore
     user root
     group root drmrpc readproc
     disabled
     seclabel u:r:recovery:s0
 
 #Add for OPPO FBE
-service hal_cryptoeng_oppo /sbin/vendor.oppo.hardware.cryptoeng@1.0-service
+service hal_cryptoeng_oppo /system/bin/vendor.oppo.hardware.cryptoeng@1.0-service
     user root
     group root drmrpc sdcard_rw sdcard_r
     disabled
     seclabel u:r:recovery:s0
 
-service keymaster-3-0 /sbin/android.hardware.keymaster@3.0-service.trustonic
+service keymaster-3-0 /system/bin/android.hardware.keymaster@3.0-service.trustonic
     user root
     group root drmrpc
     disabled
     seclabel u:r:recovery:s0
 
-service gatekeeper-1-0 /sbin/android.hardware.gatekeeper@1.0-service
+service gatekeeper-1-0 /system/bin/android.hardware.gatekeeper@1.0-service
     user root
     group root
     disabled
