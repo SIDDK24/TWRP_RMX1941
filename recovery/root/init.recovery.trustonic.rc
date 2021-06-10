@@ -47,6 +47,8 @@ service mobicore /system/bin/mcDriverDaemon --P1 /mnt/vendor/persist/mcRegistry 
 on init
     #create mountpoint for /mnt/vendor/persist partition
     mkdir /mnt/vendor/persist 0771 system system
+    # Erase the para partition to prevent recovery-looping
+    start erase_para
 
 on post-fs
     chown system system /mnt/vendor/persist
