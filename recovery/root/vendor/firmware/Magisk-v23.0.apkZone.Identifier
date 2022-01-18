@@ -1,4 +1,0 @@
-[ZoneTransfer]
-ZoneId=3
-ReferrerUrl=https://github.com/topjohnwu/Magisk/releases
-HostUrl=https://github-releases.githubusercontent.com/67702184/537ec980-b2a8-11eb-98ec-17da018f55cc?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210607%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210607T153802Z&X-Amz-Expires=300&X-Amz-Signature=6f7d51f25c143996f3d33a9d14b62594d2a2b4dc53399748a268cff209a9482b&X-Amz-SignedHeaders=host&actor_id=34239658&key_id=0&repo_id=67702184&response-content-disposition=attachment%3B%20filename%3DMagisk-v23.0.apk&response-content-type=application%2Fvnd.android.package-archive

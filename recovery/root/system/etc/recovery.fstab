@@ -4,10 +4,6 @@
 
 #<src>                                                 <mnt_point>            <type>  <mnt_flags and options>                                                                       <fs_mgr_flags>
 # Logical partitions
-/system		            ext4    /dev/block/platform/bootdevice/by-name/system			flags=wipeingui           
-/system_image           emmc    /dev/block/platform/bootdevice/by-name/system
-/vendor                 ext4    /dev/block/platform/bootdevice/by-name/vendor           flags=wipeingui
-/vendor_image           emmc    /dev/block/platform/bootdevice/by-name/vendor			 
 
 # Userdata partition
-/data					ext4	/dev/block/platform/bootdevice/by-name/userdata			flags=fileencryption=aes-256-xts
+/dev/block/platform/bootdevice/by-name/userdata		/data		ext4		noatime,nosuid,nodev,noauto_da_alloc,errors=panic	wait,check,formattable,quota,resize,fileencryption=aes-256-xts
