@@ -155,6 +155,9 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TW_SKIP_COMPATIBILITY_CHECK := true
 TW_Y_OFFSET := 52
 TW_H_OFFSET := -52
+TW_OVERRIDE_SYSTEM_PROPS := \
+    "ro.build.date.utc;ro.build.product;ro.build.fingerprint=ro.system.build.fingerprint;ro.build.version.incremental;ro.product.device=ro.product.system.device;ro.product.model=ro.product.system.model;ro.product.name=ro.product.system.name"
+TW_LOAD_VENDOR_MODULES := "touch_FT5446_fw.bin gt9xx_fw.bin Himax_firmware.bin"
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
